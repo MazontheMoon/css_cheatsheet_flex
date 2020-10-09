@@ -15,7 +15,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 75%; /*100% = 16px*/
 }
 
 /*set global styles*/
@@ -34,12 +34,44 @@ h5,
 p,
 li,
 code {
+  font-family: Verdana, sans-serif;
 }
 
-/*================
+/*=====
 Layout
-=================*/
+======*/
 
+/*single column layout for small screens and two column layout for larger screens (over 1024px)*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-gap: 0;
+}
+
+/*layout test*/
+body {
+  border: solid 2px purple;
+}
+
+header {
+  border: solid 2px yellow;
+}
+main {
+  border: solid 2px green;
+}
+
+footer {
+  border: solid 2px red;
+}
+
+div {
+  border: solid 2px blue;
+}
 /*================
 Nav Menu Bar
 =================*/
@@ -77,13 +109,22 @@ Accessibility
 
 /*Remove animation on browser prference*/
 
-
 /*=============
 Responsiveness
 ===============*/
 
-/*Media queries for portable screen views - tablets and phones*/
+/*Media queries for larger screens - laptops and monitors*/
 
+@media only screen and (min-width: 1024px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "nav main"
+      "footer footer";
+  }
+}
 
 /*====
 Print
