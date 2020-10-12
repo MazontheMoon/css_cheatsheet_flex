@@ -1,3 +1,4 @@
+
 /*========================
 Declare variables for page
 =========================*/
@@ -15,7 +16,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 75%; /*100% = 16px*/
 }
 
 /*set global styles*/
@@ -34,30 +35,103 @@ h5,
 p,
 li,
 code {
+  font-family: Verdana, sans-serif;
+}
+
+/*=====
+Layout
+======*/
+
+/*single column layout for small screens and two column layout for larger screens (over 1024px)*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "content"
+    "footer";
+  grid-gap: 0;
+}
+
+/*layout test*/
+body {
+  border: solid 5px purple;
+}
+
+#top {
+  border: solid 5px yellow;
+}
+
+nav {
+  border: solid 5px blue;
+}
+
+main {
+  border: solid 5px green;
+}
+
+section {
+  border: solid 5px grey;
+}
+
+section header {
+  border: solid 5px orange;
+}
+
+footer {
+  border: solid 5px red;
 }
 
 /*================
-Layout
+Header
 =================*/
+#top {
+  grid-area: header;
+}
 
 /*================
 Nav Menu Bar
 =================*/
+nav {
+  grid-area: navbar;
+}
 
 .nav-bar {
 }
 
-/*================
-Extra Font Styling
-=================*/
+.nav-button-outer {
+}
+
+.nav-button-inner {
+}
+
+/*============================
+Main section layout and styles
+=============================*/
+
+main {
+  grid-area: content;
+}
 
 /*================
 Section Styling
+=================*/
+.content-box {
+}
+
+.content-header {
+}
+/*================
+Extra Font Styling
 =================*/
 
 /*=====
 Footer
 ======*/
+footer {
+  grid-area: footer;
+}
 
 /*==========
 Link styles
@@ -77,13 +151,22 @@ Accessibility
 
 /*Remove animation on browser prference*/
 
-
 /*=============
 Responsiveness
 ===============*/
 
-/*Media queries for portable screen views - tablets and phones*/
+/*Media queries for larger screens - laptops and monitors*/
 
+@media only screen and (min-width: 1024px) {
+  body {
+    grid-template-columns: 25% 1fr;
+    grid-template-areas:
+      "header header"
+      "navbar content"
+      "navbar content"
+      "footer footer";
+  }
+}
 
 /*====
 Print
