@@ -11,7 +11,92 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" >
     </head>
-    <body>
-        
-    </body>
+    <!----------------------------------------------
+My CSS Cheat Sheet for learning CSS - Flex box
+------------------------------------------------
+Finding your way around 
+================================================
+1. Header
+2. Nav bar (4 menu buttons)
+3. Main - Intro & Sections
+4. Section - Introduction & Prerequisites
+5. Section - Why use Flex
+6. Section - Flex Container
+ 6a. Flex Direction
+ 6b. Flex Wrap
+ 6c. Flex Flow
+ 6d. Justify Content
+ 6e. Align Items
+ 6f. Align Content
+7. Section - Flex Children
+ 7a. Order
+ 7b. Flex Grow
+ 7c. Flex Shrink
+ 7d. Flex Basis
+ 7e. Flex
+ 7f. Align Self
+8. Footer
+----------------------------------------------->
+
+<body>
+  <!--Header-->
+  <header id="top">
+    <h1>CSS - The Flex in Flexbox</h1>
+  </header>
+  <!--nav menu-->
+  <nav>
+    <ul id="nav-bar">
+      <li class="nav-button-outer"><span class="nav-button-inner">What you need to know</span></li>
+      <li class="nav-button-outer"><span class="nav-button-inner">When to use Flex</span></li>
+      <li class="nav-button-outer"><span class="nav-button-inner">Flex Container</span></li>
+      <li class="nav-button-outer"><span class="nav-button-inner">Flex Children</span></li>
+    </ul>
+  </nav>
+  <!--main content for page-->
+  <main>
+    <section class="container-box" id="section-what">
+      <header class="container-header">
+        <h3>What you need to know...</h3>
+      </header>
+      <div class="container-box-content">
+        <p>My collection of cheatsheets so far have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and the looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
+      </div>
+    </section>
+    <section class="container-box" id="section-why">
+      <header class="container-header">
+        <h3>When to use Flexbox...</h3>
+      </header>
+      <div class="container-box-content">
+        <p>In a nutshell flexbox is used to layout and align items in the container when the dimensions are unknown...so it needs to be flexible!</p>
+        <p>Flex is best used in 1D layouts suhc as a row or column.</p>
+      </div>
+    </section>
+    <section class="container-box" id="section-flex-container">
+      <header class="container-header">
+        <h3>The Flexbox container...</h3>
+      </header>
+      <div class="container-box-content"></div>
+    </section>
+    <section class="container-box" id="section-flex-children">
+      <header class="container-header">
+        <h3>The Flexbox children...</h3>
+      </header>
+      <div class="container-box-content"></div>
+    </section>
+  </main>
+  <!--footer-->
+  <footer>
+    <!--Made by Me  - Github, Codepen, LinkedIn and Wordpress blog-->
+    <div id="all-about-me">
+      <p>Designed by <abbr title="Mary Ronan">MazOnTheMoon</abbr> 2020</p>
+      <p><a href="https://www.linkedin.com/in/mary-ronan/" target="_blank"> <span class="fab fa-linkedin"> </span></a>
+        <a href="https://github.com/MazontheMoon" target="_blank"> <span class="fab fa-github-square"> </span></a>
+        <a href="https://codepen.io/mazonthemoon/#" target="_blank"> <span class="fab fa-codepen"> </span></a>
+        <a href="https://mazcodesonthemoon.wordpress.com/" target="_blank"> <span class="fab fa-wordpress"> </span></a>
+      </p>
+    </div>
+    <!--Back to top shortcut-->
+    <div class="backtotop"><a class="toplink" href="#top"> <i class="far fa-arrow-alt-circle-up"></i></a></div>
+  </footer>
+ </body>
 </html>
