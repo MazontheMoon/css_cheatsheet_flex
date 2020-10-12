@@ -1,4 +1,3 @@
-
 /*========================
 Declare variables for page
 =========================*/
@@ -117,11 +116,15 @@ main {
 /*================
 Section Styling
 =================*/
-.content-box {
+.container-box {
 }
 
-.content-header {
+.container-header {
 }
+
+.container-box-content {
+}
+
 /*================
 Extra Font Styling
 =================*/
