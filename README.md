@@ -22,11 +22,12 @@ Web Browser
 Version #1.1 - Initial Content
 
 
-
 ## Table of Contents 
 
-1. Intro
-2. TBC
+1. Intro (Prerequisites)
+2. Why Use Flex
+3. Flex Container
+4. Flex Children
 
 
 ## Authors
@@ -62,7 +63,7 @@ Examples:
 * Coolors.co
 
 ## Acknowledgments
-We would like to offer our appreciation to Spotify and the *Horizon Zero Dawn* game soundtracks for providing the suitable background noise for this project
+We would like to offer our appreciation to Spotify and the *Game of Thrones Calming Background Music* playlist for providing the suitable background noise for this project
 
 ## License
 
