@@ -1,3 +1,4 @@
+
 /*========================
 Declare variables for page
 =========================*/
@@ -47,49 +48,90 @@ body {
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"
-    "nav"
-    "main"
+    "navbar"
+    "content"
     "footer";
   grid-gap: 0;
 }
 
 /*layout test*/
 body {
-  border: solid 2px purple;
+  border: solid 5px purple;
 }
 
-header {
-  border: solid 2px yellow;
+#top {
+  border: solid 5px yellow;
 }
+
+nav {
+  border: solid 5px blue;
+}
+
 main {
-  border: solid 2px green;
+  border: solid 5px green;
+}
+
+section {
+  border: solid 5px grey;
+}
+
+section header {
+  border: solid 5px orange;
 }
 
 footer {
-  border: solid 2px red;
+  border: solid 5px red;
 }
 
-div {
-  border: solid 2px blue;
+/*================
+Header
+=================*/
+#top {
+  grid-area: header;
 }
+
 /*================
 Nav Menu Bar
 =================*/
+nav {
+  grid-area: navbar;
+}
 
 .nav-bar {
 }
 
-/*================
-Extra Font Styling
-=================*/
+.nav-button-outer {
+}
+
+.nav-button-inner {
+}
+
+/*============================
+Main section layout and styles
+=============================*/
+
+main {
+  grid-area: content;
+}
 
 /*================
 Section Styling
+=================*/
+.content-box {
+}
+
+.content-header {
+}
+/*================
+Extra Font Styling
 =================*/
 
 /*=====
 Footer
 ======*/
+footer {
+  grid-area: footer;
+}
 
 /*==========
 Link styles
@@ -117,11 +159,11 @@ Responsiveness
 
 @media only screen and (min-width: 1024px) {
   body {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 25% 1fr;
     grid-template-areas:
       "header header"
-      "nav main"
-      "nav main"
+      "navbar content"
+      "navbar content"
       "footer footer";
   }
 }
