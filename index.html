@@ -14,7 +14,7 @@
     <!----------------------------------------------
 My CSS Cheat Sheet for learning CSS - Flex box
 ------------------------------------------------
-Finding your way around 
+Finding your way around
 ================================================
 1. Header
 2. Nav bar (4 menu buttons)
@@ -59,7 +59,7 @@ Finding your way around
         <h3>What you need to know...</h3>
       </header>
       <div class="container-box-content">
-        <p>My collection of cheatsheets so far have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and the looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
+        <p>My collection of cheatsheets in my self-taught coding journey so far have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and then looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
       </div>
     </section>
     <section class="container-box" id="section-why">
@@ -68,7 +68,7 @@ Finding your way around
       </header>
       <div class="container-box-content">
         <p>In a nutshell flexbox is used to layout and align items in the container when the dimensions are unknown...so it needs to be flexible!</p>
-        <p>Flex is best used in 1D layouts such as a row or column.</p>
+        <p>Flex is best used in 1D layouts such as a single row or column.</p>
       </div>
     </section>
     <section class="container-box" id="section-flex-container">
@@ -83,6 +83,23 @@ Finding your way around
   display:flex;
 }</pre>
         </code>
+        <p>To illustrate the flex properties and values the flex container will have 3 flex children named <span class="highlighter">Alpha</span>, <span class="highlighter">Beta</span> and <span class="highlighter">Charlie</span>.</p>
+        <figure class="flex-examples">
+          <div class="example-container">
+            <div class="example-child">Alpha</div>
+            <div class="example-child">Beta</div>
+            <div class="example-child">Charlie</div>
+          </div>
+          <figcaption>Before flex...</figcaption>
+        </figure>
+        <figure>
+          <div class="example-container example-set-flex">
+            <div class="example-child">Alpha</div>
+            <div class="example-child">Beta</div>
+            <div class="example-child">Charlie</div>
+          </div>
+          <figcaption>After flex...with defaults </figcaption>
+        </figure>
         <p class="list-caption">Flex Container Properties</p>
         <ul class="container-box-content-list">
           <li><a href="#subsection-direction">Flex Direction</a></li>
@@ -95,7 +112,14 @@ Finding your way around
         <div class="container-box-content-subsection">
           <h5 id="subsection-direction">Flex Direction</h5>
           <p>There are two axis in the flex container, the <span class="highlighter">main axis</span> and <span class="highlighter">cross axis.</span></p>
-          <p><code class="code-word">flex-direction</code> specifies which axis is the main axis. For example if using a row the main axis is the x-axis and the cross axis is the y-axis, or if in a column the main axis is the y-axis and the cross axis is the x-axis.</p>
+          <p><code class="code-word">flex-direction</code> specifies which axis is the main axis. For example, in a layout in a row the main axis is the x-axis and the cross axis is the y-axis, or if in a column the main axis is the y-axis and the cross axis is the x-axis.</p>
+          <p>The values available for <code class="code-word">flex-direction</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">flex-direction: row; (default)</code></li>
+            <li><code class="code-word">flex-direction: column;</code></li>
+            <li><code class="code-word">flex-direction: row-reverse;</code></li>
+            <li><code class="code-word">flex-direction: column-reverse;</code></li>
+          </ul>
         </div>
         <div class="container-box-content-subsection">
           <h5 id="subsection-wrap">Flex Wrap</h5>
