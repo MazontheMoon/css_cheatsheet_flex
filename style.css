@@ -21,7 +21,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-size: 75%; /*100% = 16px*/
+  font-size: 100%; /*100% = 16px*/
 }
 
 /*set global styles*/
@@ -153,13 +153,7 @@ Section Styling
 .container-box-content-subsection {
 }
 
-/*===================
-Code Snippet styling
-===================*/
-.code-word {
-}
-
-.code-box {
+.code-value-list {
 }
 
 /*================
@@ -171,6 +165,51 @@ Extra Font Styling
 }
 
 .list-caption {
+}
+
+/*===================
+Code Snippet styling
+===================*/
+.code-word {
+}
+
+.code-box {
+}
+
+/*========================
+Code Illustration styling
+=======================*/
+/*figure to contain the example illustrations*/
+.flex-examples {
+}
+
+/*figcaption to label the property and value set in illustration*/
+
+.flex-examples figcaption {
+}
+
+/*container box for flex examples*/
+.example-container {
+  width: 250px;
+  height: 150px;
+  border: solid black 3px;
+  background-color: grey;
+}
+
+/*child item for flex examples*/
+.example-child {
+  width: 75px;
+  height: 45px;
+  border: solid 1px var(--text-light, white);
+  background-color: purple;
+  color: var(--text-light, white);
+  text-align: center;
+  line-height: 45px;
+}
+
+/*flex default*/
+.example-set-flex {
+  display: flex;
 }
 
 /*=====
