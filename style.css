@@ -4,6 +4,12 @@ Declare variables for page
 :root {
   /*color scheme*/
 
+  /*text-light*/
+  /*text-dark*/
+  /**/
+  /*codebox-background*/
+  /**/
+
   /*font*/
 }
 
@@ -26,14 +32,16 @@ body * {
   margin: 0;
 }
 
-/*reset default font - never shall Time New Roman be seen agan!*/
+/*============
+Text and Fonts
+===============*/
 
+/*reset default font - never shall Time New Roman be seen again as a fallback!*/
 h1,
 h3,
 h5,
 p,
-li,
-code {
+li {
   font-family: Verdana, sans-serif;
 }
 
@@ -55,32 +63,46 @@ body {
 
 /*layout test*/
 body {
-  border: solid 5px purple;
+  border: solid 3px purple;
 }
 
 #top {
-  border: solid 5px yellow;
+  border: solid 3px yellow;
 }
 
 nav {
-  border: solid 5px blue;
+  border: solid 3px blue;
 }
 
 main {
-  border: solid 5px green;
+  border: solid 3px green;
 }
 
-section {
-  border: solid 5px grey;
+.container-box {
+  border: solid 3px grey;
 }
 
-section header {
-  border: solid 5px orange;
+.container-header {
+  border: solid 3px teal;
+}
+
+.container-box-content {
+  border: solid 3px orange;
+}
+
+.container-box-content-list {
+  border: solid 3px lavender;
+}
+
+.container-box-content-subsection {
+  border: solid 3px seagreen;
 }
 
 footer {
-  border: solid 5px red;
+  border: solid 3px red;
 }
+
+/*End of layout test boxes*/
 
 /*================
 Header
@@ -125,9 +147,31 @@ Section Styling
 .container-box-content {
 }
 
+.container-box-content-list {
+}
+
+.container-box-content-subsection {
+}
+
+/*===================
+Code Snippet styling
+===================*/
+.code-word {
+}
+
+.code-box {
+}
+
 /*================
 Extra Font Styling
 =================*/
+
+/*text stands out visually but not to be read differently on screenreader */
+.highlighter {
+}
+
+.list-caption {
+}
 
 /*=====
 Footer
