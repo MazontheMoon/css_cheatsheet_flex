@@ -85,20 +85,20 @@ Finding your way around
         </code>
         <p>To illustrate the flex properties and values the flex container will have 3 flex children named <span class="highlighter">Alpha</span>, <span class="highlighter">Beta</span> and <span class="highlighter">Charlie</span>.</p>
         <figure class="flex-examples">
+          <figcaption>Before flex...</figcaption>
           <div class="example-container">
             <div class="example-child">Alpha</div>
             <div class="example-child">Beta</div>
             <div class="example-child">Charlie</div>
           </div>
-          <figcaption>Before flex...</figcaption>
         </figure>
-        <figure>
+        <figure class="flex-examples">
+          <figcaption>After flex...with defaults </figcaption>
           <div class="example-container example-set-flex">
             <div class="example-child">Alpha</div>
             <div class="example-child">Beta</div>
             <div class="example-child">Charlie</div>
           </div>
-          <figcaption>After flex...with defaults </figcaption>
         </figure>
         <p class="list-caption">Flex Container Properties</p>
         <ul class="container-box-content-list">
@@ -115,14 +115,78 @@ Finding your way around
           <p><code class="code-word">flex-direction</code> specifies which axis is the main axis. For example, in a layout in a row the main axis is the x-axis and the cross axis is the y-axis, or if in a column the main axis is the y-axis and the cross axis is the x-axis.</p>
           <p>The values available for <code class="code-word">flex-direction</code> are:</p>
           <ul class="code-value-list">
-            <li><code class="code-word">flex-direction: row; (default)</code></li>
+            <li><code class="code-word">flex-direction: row;</code>(default)</li>
             <li><code class="code-word">flex-direction: column;</code></li>
             <li><code class="code-word">flex-direction: row-reverse;</code></li>
             <li><code class="code-word">flex-direction: column-reverse;</code></li>
           </ul>
+          <figure class="flex-examples">
+            <figcaption>Row</figcaption>
+            <div class="example-container example-set-flex">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Column</figcaption>
+            <div class="example-container example-set-direction-column">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Row reverse</figcaption>
+            <div class="example-container example-set-direction-row-reverse">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Column reverse</figcaption>
+            <div class="example-container example-set-direction-column-reverse">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
         </div>
         <div class="container-box-content-subsection">
           <h5 id="subsection-wrap">Flex Wrap</h5>
+          <p>Flex items will try and fit all on one line by default</p>
+          <p><code class="code-word">flex-wrap</code> can be used to change this behaviour</p>
+          <p>The values available for <code class="code-word">flex-wrap</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">flex-wrap: nowrap</code> (default)</li>
+            <li><code class="code-word">flex-wrap: wrap;</code></li>
+            <li><code class="code-word">flex-wrap: wrap-reverse;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>No wrap</figcaption>
+            <div class="example-set-nowrap">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Wrap</figcaption>
+            <div class="example-set-wrap">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Wrap reverse</figcaption>
+            <div class="example-set-wrap-reverse">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
         </div>
         <div class="container-box-content-subsection">
           <h5 id="subsection-flow">Flex Flow</h5>
