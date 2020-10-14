@@ -162,6 +162,7 @@ Extra Font Styling
 
 /*text stands out visually but not to be read differently on screenreader */
 .highlighter {
+  font-style: italic;
 }
 
 .list-caption {
@@ -212,6 +213,50 @@ Code Illustration styling
   display: flex;
 }
 
+/*flex-direction examples*/
+
+.example-set-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-set-direction-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.example-set-direction-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*flex-wrap examples - resize container to be smaller*/
+
+.example-set-nowrap {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border: solid black 3px;
+  background-color: grey;
+}
+
+.example-set-wrap {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border: solid black 3px;
+  background-color: grey;
+  flex-wrap: wrap;
+}
+
+.example-set-wrap-reverse {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border: solid black 3px;
+  background-color: grey;
+  flex-wrap: wrap-reverse;
+}
 /*=====
 Footer
 ======*/
