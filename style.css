@@ -257,6 +257,44 @@ Code Illustration styling
   background-color: grey;
   flex-wrap: wrap-reverse;
 }
+
+/*justify-content examples*/
+
+.example-set-justify-content-start {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.example-set-justify-content-end {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.example-set-justify-content-center {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.example-set-justify-content-between {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.example-set-justify-content-around {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.example-set-justify-content-evenly {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
 /*=====
 Footer
 ======*/
