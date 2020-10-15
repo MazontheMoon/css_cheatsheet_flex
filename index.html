@@ -234,7 +234,6 @@ Finding your way around
             <li><code class="code-word">justify-content: space-around;</code></li>
             <li><code class="code-word">justify-content: space-evenly;</code></li>
           </ul>
-          <p>...</p>
           <figure class="flex-examples">
             <figcaption>flex-start</figcaption>
             <div class="example-container example-set-justify-content-start">
@@ -243,7 +242,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>...</p>
+          <p>Flex items are packed in starting from the <span class="highlighter">start</span> of the main-axis</p>
           <figure class="flex-examples">
             <figcaption>flex-end</figcaption>
             <div class="example-container example-set-justify-content-end">
@@ -252,7 +251,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>...</p>
+          <p>Flex items are packed in starting from the <span class="highlighter">end</span> of the main-axis</p>
           <figure class="flex-examples">
             <figcaption>center</figcaption>
             <div class="example-container example-set-justify-content-center">
@@ -261,7 +260,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>...</p>
+          <p>Flex items are packed in around the center point of the main-axis</p>
           <figure class="flex-examples">
             <figcaption>space-between</figcaption>
             <div class="example-container example-set-justify-content-between">
@@ -270,7 +269,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>...</p>
+          <p>The first flex item is flush with the <span class="highlighter">start</span> of the main axis, the last item is flush with the <span class="highlighter">end</span> of the main axis and all remaining items spead evenly between them.</p>
           <figure class="flex-examples">
             <figcaption>space-around</figcaption>
             <div class="example-container example-set-justify-content-around">
@@ -279,7 +278,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>...</p>
+          <p>Every flex item has the same amount of space before and after it - this means that the first and last items look like have <span class="highlighter">half</span> the space at the very beginning and end (like a margin that doesn't collapse between siblings).</p>
           <figure class="flex-examples">
             <figcaption>space-evenly</figcaption>
             <div class="example-container example-set-justify-content-evenly">
@@ -288,11 +287,20 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>Other...</p>
+          <p>All flex items distributed along the main axis with equal space between them</p>
         </div>
         <!--Section 3 Subsection E - Flex Container - Align Items-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-align-items">Align Items</h5>
+          <p>Similar to <code class="code-word">justify-content</code> the <code class="code-word">align-items</code> aligns the flex items along the container but this time on the <span class="highlighter">cross-axis</span> (perpendicular to the <span class="highlighter">main-axis</span>.</p>
+          <p>The values available for <code class="code-word">align-items</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">align-items: flex-start;</code> (default)</li>
+            <li><code class="code-word">align-items: flex-end;</code></li>
+            <li><code class="code-word">align-items: center;</code></li>
+            <li><code class="code-word">align-items: stretch;</code></li>
+            <li><code class="code-word">align-items: baseline;</code></li>
+          </ul>
         </div>
         <!--Section 3 Subsection F - Flex Container - Align Content-->
         <div class="container-box-content-subsection">
