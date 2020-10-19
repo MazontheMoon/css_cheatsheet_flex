@@ -98,6 +98,13 @@ main {
   border: solid 3px seagreen;
 }
 
+.flex-examples {
+  border: solid 3px #dd2c00;
+}
+
+.flex-examples-info {
+  border: solid 3px #8e24aa;
+}
 footer {
   border: solid 3px red;
 }
@@ -410,6 +417,45 @@ Code Illustration styling
   align-content: space-evenly;
 }
 
+/*flex order examples*/
+
+.example-set-order {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+#flex-example-order-a {
+  order: 2;
+}
+
+#flex-example-order-b {
+  order: 3;
+}
+
+#flex-example-order-c {
+  order: 1;
+}
+
+/*flex grow examples*/
+.example-set-grow {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+#flex-example-grow-a {
+  flex-grow: 0;
+}
+
+#flex-example-grow-b {
+  flex-grow: 2;
+}
+
+#flex-example-grow-c {
+  flex-grow: 1;
+}
 /*=====
 Footer
 ======*/
