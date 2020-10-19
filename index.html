@@ -242,7 +242,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are packed in starting from the <span class="highlighter">start</span> of the main-axis</p>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the main-axis</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using flex-end</figcaption>
             <div class="example-container example-set-justify-content-end">
@@ -251,7 +251,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are packed in starting from the <span class="highlighter">end</span> of the main-axis</p>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the main-axis</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using center</figcaption>
             <div class="example-container example-set-justify-content-center">
@@ -260,7 +260,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are packed in around the center point of the main-axis</p>
+          <p class="flex-examples-info">Flex items are packed in around the center point of the main-axis</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using space-between</figcaption>
             <div class="example-container example-set-justify-content-between">
@@ -269,7 +269,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>The first flex item is flush with the <span class="highlighter">start</span> of the main axis, the last item is flush with the <span class="highlighter">end</span> of the main axis and all remaining items spead evenly between them.</p>
+          <p class="flex-examples-info">The first flex item is flush with the <span class="highlighter">start</span> of the main axis, the last item is flush with the <span class="highlighter">end</span> of the main axis and all remaining items spead evenly between them.</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using space-around</figcaption>
             <div class="example-container example-set-justify-content-around">
@@ -278,7 +278,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>Every flex item has the same amount of space before and after it - this means that the first and last items look like have <span class="highlighter">half</span> the space at the very beginning and end (like a margin that doesn't collapse between siblings).</p>
+          <p class="flex-examples-info">Every flex item has the same amount of space before and after it - this means that the first and last items look like have <span class="highlighter">half</span> the space at the very beginning and end (like a margin that doesn't collapse between siblings).</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using space-evenly</figcaption>
             <div class="example-container example-set-justify-content-evenly">
@@ -287,7 +287,7 @@ Finding your way around
               <div class="example-child">Charlie</div>
             </div>
           </figure>
-          <p>All flex items distributed along the main axis with equal space between them</p>
+          <p class="flex-examples-info">All flex items distributed along the main axis with equal space between them</p>
         </div>
         <!--Section 3 Subsection E - Flex Container - Align Items-->
         <div class="container-box-content-subsection">
@@ -310,7 +310,7 @@ Finding your way around
               <div class="example-child example-child-large">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using flex-end</figcaption>
             <div class="example-container example-set-align-items-end">
@@ -319,7 +319,7 @@ Finding your way around
               <div class="example-child example-child-large">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using center</figcaption>
             <div class="example-container example-set-align-items-center">
@@ -328,7 +328,7 @@ Finding your way around
               <div class="example-child example-child-large">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
+          <p class="flex-examples-info">Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using stretch</figcaption>
             <div class="example-container example-set-align-items-stretch">
@@ -337,7 +337,7 @@ Finding your way around
               <div class="example-child-noheight">Charlie</div>
             </div>
           </figure>
-          <p>Flex items stretch to fill the space - unless it has a specified size (then it will behave like flex-start)</p>
+          <p class="flex-examples-info">Flex items stretch to fill the space - unless it has a specified size (then it will behave like flex-start)</p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...using baseline</figcaption>
             <div class="example-container example-set-align-items-baseline">
@@ -346,11 +346,106 @@ Finding your way around
               <div class="example-child example-child-large">Charlie</div>
             </div>
           </figure>
-          <p>Flex items are aligned so their baselines are aligned (all the text is on the same line regardless of the container size).</p>
+          <p class="flex-examples-info">Flex items are aligned so their baselines are aligned (all the text is on the same line regardless of the container size).</p>
         </div>
         <!--Section 3 Subsection F - Flex Container - Align Content-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-align-content">Align Content</h5>
+          <p>Similar to how <code class="code-word">justify-content</code> aligns individual items within the <span class="highlighter">main-axis</span>, <code class="code-word">align-content</code> aligns a flex container’s lines within the containers when there is extra space in the <span class="highlighter">cross-axis</span> (when there is more than 1 line of children)</p>
+          <p>The values available for <code class="code-word">align-content</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">align-content: flex-start;</code></li>
+            <li><code class="code-word">align-content: flex-end;</code></li>
+            <li><code class="code-word">align-content: center;</code></li>
+            <li><code class="code-word">align-content: stretch;</code></li>
+            <li><code class="code-word">align-content: space-between;</code></li>
+            <li><code class="code-word">align-content: space-around;</code></li>
+            <li><code class="code-word">align-content: space-evenly;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-start</figcaption>
+            <div class="example-container example-set-align-content-start">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-end</figcaption>
+            <div class="example-container example-set-align-content-end">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using center</figcaption>
+            <div class="example-container example-set-align-content-center">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using stretch</figcaption>
+            <div class="example-container example-set-align-content-stretch">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items stretch to fill the space (unless it has a specified size)</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-between</figcaption>
+            <div class="example-container example-set-align-content-space-between">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">The first line is flush with the <span class="highlighter">start</span> of the main axis, the last line is flush with the <span class="highlighter">end</span> of the main axis and all remaining items/lines spead evenly between them.</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-around</figcaption>
+            <div class="example-container example-set-align-content-space-around">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Even distribution with equal space between lines</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-evenly</figcaption>
+            <div class="example-container example-set-align-content-space-evenly">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Even distribution with equal space between items</p>
         </div>
       </div>
     </section>
