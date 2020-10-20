@@ -14,7 +14,7 @@
     <!----------------------------------------------
 My CSS Cheat Sheet for learning CSS - Flex box
 ------------------------------------------------
-Finding your way around 
+Finding your way around
 ================================================
 1. Header
 2. Nav bar (4 menu buttons)
@@ -37,7 +37,6 @@ Finding your way around
  7f. Align Self
 8. Footer
 ----------------------------------------------->
-
 <body>
   <!-------------
   Header & Title
@@ -506,11 +505,51 @@ Finding your way around
         <!--Section 4 Subsection E - Flex Children - Flex-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-flex">Flex</h5>
-          <p>Rather they using <code class="code-word">flex-grow</code>, <code class="code-word">flex-shrink</code> and <code class="code-word">flex-basis</code> seperately we instead use the shorthand of <code class="code-word">flex</code></p>
+          <p>Instead of using <code class="code-word">flex-grow</code>, <code class="code-word">flex-shrink</code> and <code class="code-word">flex-basis</code> seperately we can use the shorthand of <code class="code-word">flex</code> so this...</p>
+          <code class="code-box">
+            <pre>
+.flex-child {
+  flex-grow:1;
+  flex-shrink: 0;
+  flex-basis: 75px;
+}</pre>
+          </code>
+          <p>...can instead be written as...</p>
+          <code class="code-box">
+            <pre>
+.flex-child {
+  flex: 1 0 75px;
+}</pre>
+          </code>
+          <p>When using <code class="code-word">flex</code> the parameters for <code class="code-word">flex-shrink</code> and <code class="code-word">flex-basis</code> are optional (the defaults for <code class="code-word">flex</code> is 0 1 auto) so it is also possible to write only...</p>
+          <code class="code-box">
+            <pre>
+.flex-child {
+  flex:1;
+}</pre>
+          </code>
+          <p>...and this will use <code class="code-word">flex-grow</code> as 1 with <code class="code-word">flex-shrink</code> and <code class="code-word">flex-basis</code> using the defaults.</p>
         </div>
         <!--Section 4 Subsection F - Flex Children - Align Self-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-align-self">Align Self</h5>
+          <p>Using <code class="code-word">align-self</code>allows the default alignemtn or the alignment set by <code class="code-word">align-items</code> to be overridden by the flex child.</p>
+          <p>The same values available for <code class="code-word">align-items</code> can be used with <code class="code-word">align-self</code>:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">align-self: flex-start;</code> (default)</li>
+            <li><code class="code-word">align-self: flex-end;</code></li>
+            <li><code class="code-word">align-self: center;</code></li>
+            <li><code class="code-word">align-self: stretch;</code></li>
+            <li><code class="code-word">align-self: baseline;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...align-self to overwrite Charlie</figcaption>
+            <div class="example-container example-set-align-items-start">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child" id="flex-example-align-self">Charlie</div>
+            </div>
+          </figure>
         </div>
       </div>
     </section>
@@ -532,4 +571,5 @@ Finding your way around
     <div class="backtotop"><a class="toplink" href="#top"> <i class="far fa-arrow-alt-circle-up"></i></a></div>
   </footer>
 </body>
+
 </html>

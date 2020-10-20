@@ -196,7 +196,7 @@ Code Illustration styling
 .flex-examples figcaption {
 }
 
-/*Text description for additional explanation to the info in teh caption*/
+/*Text description for additional explanation to the info in the caption*/
 .flex-examples-info {
 }
 /*container box for flex examples*/
@@ -241,6 +241,14 @@ Code Illustration styling
   color: var(--text-light, white);
   text-align: center;
 }
+
+.example-child-width {
+  border: solid 1px var(--text-light, white);
+  background-color: purple;
+  color: var(--text-light, white);
+  text-align: center;
+}
+
 /*flex default*/
 .example-set-flex {
   display: flex;
@@ -455,6 +463,12 @@ Code Illustration styling
 
 #flex-example-grow-c {
   flex-grow: 1;
+}
+
+/*align-self examples*/
+
+#flex-example-align-self {
+  align-self: flex-end;
 }
 /*=====
 Footer
