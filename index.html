@@ -455,7 +455,7 @@ Finding your way around
         <h3>The Flexbox children...</h3>
       </header>
       <div class="container-box-content">
-        <p>The flex children (items within the flex container) are laid out along the axis set on the flex container</p>
+        <p>By default as many flexbox children are placed onto each row as can fit and any overflow moves down to the next row (size of flex items depends on content)</p>
         <p class="list-caption">Flex Children Properties</p>
         <ul class="container-box-content-list">
           <li><a href="#subsection-order">Order</a></li>
@@ -468,10 +468,30 @@ Finding your way around
         <!--Section 4 Subsection A - Flex Children - Order-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-order">Order</h5>
+          <p>Flexbox allows you to change the layout order of flex items without affecting the source order...could be of use for changing position of nav menu items in reponsive layouts</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...changing order</figcaption>
+            <div class="example-container example-set-order">
+              <div class="example-child" id="flex-example-order-a">Alpha</div>
+              <div class="example-child" id="flex-example-order-b">Beta</div>
+              <div class="example-child" id="flex-example-order-c">Charlie</div>
+            </div>
+          </figure>
         </div>
         <!--Section 4 Subsection B - Flex Children - Flex Grow-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-grow">Flex Grow</h5>
+          <p>Using<code class="code-word">flex-grow</code>gives the ability for the flex-item to grow if necessary and dictates how much space it can grow to take up by setting a unitless value.</p>
+          <p>If all items set to use <code class="code-word">flex-grow: 1;</code> they will share any available space equally, but of an item is set to 2 (or higher) that item will take twice the amount of space. </p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...grow grow grow!</figcaption>
+            <div class="example-container example-set-grow">
+              <div class="example-child-noheight" id="flex-example-grow-a">Alpha</div>
+              <div class="example-child-noheight" id="flex-example-grow-b">Beta</div>
+              <div class="example-child-noheight" id="flex-example-grow-c">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Alpha is set to 0, Beta set to 2 and Charlie set to 1 for <code class="code-word">flex-grow</code> </p>
         </div>
         <!--Section 4 Subsection C - Flex Children - Flex Shrink-->
         <div class="container-box-content-subsection">
