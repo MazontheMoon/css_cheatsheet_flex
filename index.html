@@ -39,494 +39,497 @@ Finding your way around
 ----------------------------------------------->
 
 <body>
-<!-------------
-Header & Title
--------------->
-<header id="top">
-  <h1>CSS - The Flex in Flexbox</h1>
-</header>
-<!--------
-Nav menu
---------->
-<nav>
-  <ul id="nav-bar">
-    <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-what">What you need to know</a></span></li>
-    <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-why">When to use Flex</a></span></li>
-    <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-flex-container">Flex Container</a></span></li>
-    <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-flex-children">Flex Children</a></span></li>
-  </ul>
-</nav>
-<!---------------------
-Main content for page
----------------------->
-<main>
-  <!--Section 1 - Introduction & Prerequisites-->
-  <section class="container-box" id="section-what">
-    <header class="container-header">
-      <h3>What you need to know...</h3>
-    </header>
-    <div class="container-box-content">
-      <p>My collection of cheatsheets in my self-taught coding journey so far have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and then looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
-    </div>
-  </section>
-  <!--Section 2 - Why use Flex-->
-  <section class="container-box" id="section-why">
-    <header class="container-header">
-      <h3>When to use Flexbox...</h3>
-    </header>
-    <div class="container-box-content">
-      <p>In a nutshell flexbox is used to layout and align items in the container when the dimensions are unknown...so it needs to be flexible!</p>
-      <p>Flex is best used in 1D layouts such as a single row or column.</p>
-    </div>
-  </section>
-  <!--Section 3 - Flex Container-->
-  <section class="container-box" id="section-flex-container">
-    <header class="container-header">
-      <h3>The Flexbox container...</h3>
-    </header>
-    <div class="container-box-content">
-      <p>When <code class="code-word">flex</code> is applied to a container it gives the ability to alter width or height (and even the order) expanding to fill space or shrinking to prevent overflow to best fill the container.</p>
-      <code class="code-box">
-        <pre>
+  <!-------------
+  Header & Title
+  -------------->
+  <header id="top">
+    <h1>CSS - The Flex in Flexbox</h1>
+  </header>
+  <!--------
+  Nav menu
+  --------->
+  <nav>
+    <ul id="nav-bar">
+      <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-what">What you need to know</a></span></li>
+      <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-why">When to use Flex</a></span></li>
+      <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-flex-container">Flex Container</a></span></li>
+      <li class="nav-button-outer"><span class="nav-button-inner"><a href="#section-flex-children">Flex Children</a></span></li>
+    </ul>
+  </nav>
+  <!---------------------
+  Main content for page
+  ---------------------->
+  <main>
+    <!--Section 1 - Introduction & Prerequisites-->
+    <section class="container-box" id="section-what">
+      <header class="container-header">
+        <h3>What you need to know...</h3>
+      </header>
+      <div class="container-box-content">
+        <p>My collection of cheatsheets in my self-taught coding journey so far have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and then looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
+      </div>
+    </section>
+    <!--Section 2 - Why use Flex-->
+    <section class="container-box" id="section-why">
+      <header class="container-header">
+        <h3>When to use Flexbox...</h3>
+      </header>
+      <div class="container-box-content">
+        <p>In a nutshell flexbox is used to layout and align items in the container when the dimensions are unknown...so it needs to be flexible!</p>
+        <p>Flex is best used in 1D layouts such as a single row or column.</p>
+      </div>
+    </section>
+    <!--Section 3 - Flex Container-->
+    <section class="container-box" id="section-flex-container">
+      <header class="container-header">
+        <h3>The Flexbox container...</h3>
+      </header>
+      <div class="container-box-content">
+        <p>When <code class="code-word">flex</code> is applied to a container it gives the ability to alter width or height (and even the order) expanding to fill space or shrinking to prevent overflow to best fill the container.</p>
+        <code class="code-box">
+          <pre>
 .container {
-display:flex;
+  display:flex;
 }</pre>
-      </code>
-      <p>To illustrate the flex properties and values the flex container will have 3 flex children named <span class="highlighter">Alpha</span>, <span class="highlighter">Beta</span> and <span class="highlighter">Charlie</span>.</p>
-      <figure class="flex-examples">
-        <figcaption>Seeing is believing...before flex</figcaption>
-        <div class="example-container">
-          <div class="example-child">Alpha</div>
-          <div class="example-child">Beta</div>
-          <div class="example-child">Charlie</div>
-        </div>
-      </figure>
-      <figure class="flex-examples">
-        <figcaption>Seeing is believing...after flex (with defaults)</figcaption>
-        <div class="example-container example-set-flex">
-          <div class="example-child">Alpha</div>
-          <div class="example-child">Beta</div>
-          <div class="example-child">Charlie</div>
-        </div>
-      </figure>
-      <p class="list-caption">Flex Container Properties</p>
-      <ul class="container-box-content-list">
-        <li><a href="#subsection-direction">Flex Direction</a></li>
-        <li><a href="#subsection-wrap">Flex Wrap</a></li>
-        <li><a href="#subsection-flow">Flex Flow</a></li>
-        <li><a href="#subsection-justify-content">Justify Content</a></li>
-        <li><a href="#subsection-align-items">Align Items</a></li>
-        <li><a href="#subsection-align-content">Align Content</a></li>
-      </ul>
-      <!--Section 3 Subsection A - Flex Container - Flex Direction-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-direction">Flex Direction</h5>
-        <p>There are two axis in the flex container, the <span class="highlighter">main axis</span> and <span class="highlighter">cross axis.</span></p>
-        <p><code class="code-word">flex-direction</code> specifies which axis is the main axis. For example, in a layout in a row the main axis is the x-axis and the cross axis is the y-axis, or if in a column the main axis is the y-axis and the cross axis is the x-axis.</p>
-        <p>The values available for <code class="code-word">flex-direction</code> are:</p>
-        <ul class="code-value-list">
-          <li><code class="code-word">flex-direction: row;</code>(default)</li>
-          <li><code class="code-word">flex-direction: column;</code></li>
-          <li><code class="code-word">flex-direction: row-reverse;</code></li>
-          <li><code class="code-word">flex-direction: column-reverse;</code></li>
-        </ul>
+        </code>
+        <p>To illustrate the flex properties and values the flex container will have 3 flex children named <span class="highlighter">Alpha</span>, <span class="highlighter">Beta</span> and <span class="highlighter">Charlie</span>.</p>
         <figure class="flex-examples">
-          <figcaption>Seeing is believing... using row</figcaption>
+          <figcaption>Seeing is believing...before flex</figcaption>
+          <div class="example-container">
+            <div class="example-child">Alpha</div>
+            <div class="example-child">Beta</div>
+            <div class="example-child">Charlie</div>
+          </div>
+        </figure>
+        <figure class="flex-examples">
+          <figcaption>Seeing is believing...after flex (with defaults)</figcaption>
           <div class="example-container example-set-flex">
             <div class="example-child">Alpha</div>
             <div class="example-child">Beta</div>
             <div class="example-child">Charlie</div>
           </div>
         </figure>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using column</figcaption>
-          <div class="example-container example-set-direction-column">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using row reverse</figcaption>
-          <div class="example-container example-set-direction-row-reverse">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using column reverse</figcaption>
-          <div class="example-container example-set-direction-column-reverse">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-      </div>
-      <!--Section 3 Subsection B - Flex Container - Flex Wrap-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-wrap">Flex Wrap</h5>
-        <p>Flex items will try and fit all on one line by default</p>
-        <p><code class="code-word">flex-wrap</code> can be used to change this behaviour</p>
-        <p>The values available for <code class="code-word">flex-wrap</code> are:</p>
-        <ul class="code-value-list">
-          <li><code class="code-word">flex-wrap: nowrap</code> (default)</li>
-          <li><code class="code-word">flex-wrap: wrap;</code></li>
-          <li><code class="code-word">flex-wrap: wrap-reverse;</code></li>
+        <p class="list-caption">Flex Container Properties</p>
+        <ul class="container-box-content-list">
+          <li><a href="#subsection-direction">Flex Direction</a></li>
+          <li><a href="#subsection-wrap">Flex Wrap</a></li>
+          <li><a href="#subsection-flow">Flex Flow</a></li>
+          <li><a href="#subsection-justify-content">Justify Content</a></li>
+          <li><a href="#subsection-align-items">Align Items</a></li>
+          <li><a href="#subsection-align-content">Align Content</a></li>
         </ul>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using no wrap</figcaption>
-          <div class="example-set-nowrap">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using wrap</figcaption>
-          <div class="example-set-wrap">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using wrap reverse</figcaption>
-          <div class="example-set-wrap-reverse">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-      </div>
-      <!--Section 3 Subsection C - Flex Container - Flex Flow-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-flow">Flex Flow</h5>
-        <p>There is a shorthand for writing <code class="code-word">flex-direction</code> and <code class="code-word">flex-wrap</code> which is <code class="code-word">flex-wrap</code></p>
-        <p>So this...</p>
-        <code class="code-box">
-          <pre>
+        <!--Section 3 Subsection A - Flex Container - Flex Direction-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-direction">Flex Direction</h5>
+          <p>There are two axis in the flex container, the <span class="highlighter">main axis</span> and <span class="highlighter">cross axis.</span></p>
+          <p><code class="code-word">flex-direction</code> specifies which axis is the main axis. For example, in a layout in a row the main axis is the x-axis and the cross axis is the y-axis, or if in a column the main axis is the y-axis and the cross axis is the x-axis.</p>
+          <p>The values available for <code class="code-word">flex-direction</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">flex-direction: row;</code>(default)</li>
+            <li><code class="code-word">flex-direction: column;</code></li>
+            <li><code class="code-word">flex-direction: row-reverse;</code></li>
+            <li><code class="code-word">flex-direction: column-reverse;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing... using row</figcaption>
+            <div class="example-container example-set-flex">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using column</figcaption>
+            <div class="example-container example-set-direction-column">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using row reverse</figcaption>
+            <div class="example-container example-set-direction-row-reverse">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using column reverse</figcaption>
+            <div class="example-container example-set-direction-column-reverse">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+        </div>
+        <!--Section 3 Subsection B - Flex Container - Flex Wrap-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-wrap">Flex Wrap</h5>
+          <p>Flex items will try and fit all on one line by default</p>
+          <p><code class="code-word">flex-wrap</code> can be used to change this behaviour</p>
+          <p>The values available for <code class="code-word">flex-wrap</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">flex-wrap: nowrap</code> (default)</li>
+            <li><code class="code-word">flex-wrap: wrap;</code></li>
+            <li><code class="code-word">flex-wrap: wrap-reverse;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using no wrap</figcaption>
+            <div class="example-set-nowrap">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using wrap</figcaption>
+            <div class="example-set-wrap">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using wrap reverse</figcaption>
+            <div class="example-set-wrap-reverse">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+        </div>
+        <!--Section 3 Subsection C - Flex Container - Flex Flow-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-flow">Flex Flow</h5>
+          <p>There is a shorthand for writing <code class="code-word">flex-direction</code> and <code class="code-word">flex-wrap</code> which is <code class="code-word">flex-wrap</code></p>
+          <p>So this...</p>
+          <code class="code-box">
+            <pre>
 .container {
-display:flex;
-flex-direction: column;
-flex-wrap: wrap-reverse;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
 }</pre>
-        </code>
-        <p>can instead be written as...</p>
-        <code class="code-box">
-          <pre>
+          </code>
+          <p>can instead be written as...</p>
+          <code class="code-box">
+            <pre>
 .container {
-display:flex;
-flex-flow: column wrap-reverse;
+  display:flex;
+  flex-flow: column wrap-reverse;
 }</pre>
-        </code>
+          </code>
+        </div>
+        <!--Section 3 Subsection D - Flex Container - Justify Content-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-justify-content">Justify Content</h5>
+          <p>So far we have set the container to use flexbox and to use either a row or column (with or without wrapping). Our next step aligns the flex children on the container <span class="highlighter">main-axis</span>.</p>
+          <p>The values available for <code class="code-word">justify-content</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">justify-content: flex-start;</code> (default)</li>
+            <li><code class="code-word">justify-content: flex-end;</code></li>
+            <li><code class="code-word">justify-content: center;</code></li>
+            <li><code class="code-word">justify-content: space-between;</code></li>
+            <li><code class="code-word">justify-content: space-around;</code></li>
+            <li><code class="code-word">justify-content: space-evenly;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-start</figcaption>
+            <div class="example-container example-set-justify-content-start">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the main-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-end</figcaption>
+            <div class="example-container example-set-justify-content-end">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the main-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using center</figcaption>
+            <div class="example-container example-set-justify-content-center">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in around the center point of the main-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-between</figcaption>
+            <div class="example-container example-set-justify-content-between">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">The first flex item is flush with the <span class="highlighter">start</span> of the main axis, the last item is flush with the <span class="highlighter">end</span> of the main axis and all remaining items spead evenly between them.</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-around</figcaption>
+            <div class="example-container example-set-justify-content-around">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Every flex item has the same amount of space before and after it - this means that the first and last items look like have <span class="highlighter">half</span> the space at the very beginning and end (like a margin that doesn't collapse between siblings).</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-evenly</figcaption>
+            <div class="example-container example-set-justify-content-evenly">
+              <div class="example-child">Alpha</div>
+              <div class="example-child">Beta</div>
+              <div class="example-child">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">All flex items distributed along the main axis with equal space between them</p>
+        </div>
+        <!--Section 3 Subsection E - Flex Container - Align Items-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-align-items">Align Items</h5>
+          <p>Similar to <code class="code-word">justify-content</code> the <code class="code-word">align-items</code> aligns the flex items along the container but this time on the <span class="highlighter">cross-axis</span> (perpendicular to the <span class="highlighter">main-axis</span>).</p>
+          <p>The values available for <code class="code-word">align-items</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">align-items: flex-start;</code> (default)</li>
+            <li><code class="code-word">align-items: flex-end;</code></li>
+            <li><code class="code-word">align-items: center;</code></li>
+            <li><code class="code-word">align-items: stretch;</code></li>
+            <li><code class="code-word">align-items: baseline;</code></li>
+          </ul>
+          <p>All example boxes below are using <code class="code-word">flex-flow: row nowrap;</code> so the <span class="highlighter">cross-axis</span> is the y-axis (and also using <code class="code-word"> space-evenly</code> and the flex cheldren will also have different set heights.</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-start</figcaption>
+            <div class="example-container example-set-align-items-start">
+              <div class="example-child example-child-small">Alpha</div>
+              <div class="example-child example-child-medium">Beta</div>
+              <div class="example-child example-child-large">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-end</figcaption>
+            <div class="example-container example-set-align-items-end">
+              <div class="example-child example-child-small">Alpha</div>
+              <div class="example-child example-child-medium">Beta</div>
+              <div class="example-child example-child-large">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using center</figcaption>
+            <div class="example-container example-set-align-items-center">
+              <div class="example-child example-child-small">Alpha</div>
+              <div class="example-child example-child-medium">Beta</div>
+              <div class="example-child example-child-large">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using stretch</figcaption>
+            <div class="example-container example-set-align-items-stretch">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items stretch to fill the space - unless it has a specified size (then it will behave like flex-start)</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using baseline</figcaption>
+            <div class="example-container example-set-align-items-baseline">
+              <div class="example-child example-child-small">Alpha</div>
+              <div class="example-child example-child-medium">Beta</div>
+              <div class="example-child example-child-large">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are aligned so their baselines are aligned (all the text is on the same line regardless of the container size).</p>
+        </div>
+        <!--Section 3 Subsection F - Flex Container - Align Content-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-align-content">Align Content</h5>
+          <p>Similar to how <code class="code-word">justify-content</code> aligns individual items within the <span class="highlighter">main-axis</span>, <code class="code-word">align-content</code> aligns a flex container’s lines within the containers when there is extra space in the <span class="highlighter">cross-axis</span> (when there is more than 1 line of children)</p>
+          <p>The values available for <code class="code-word">align-content</code> are:</p>
+          <ul class="code-value-list">
+            <li><code class="code-word">align-content: flex-start;</code></li>
+            <li><code class="code-word">align-content: flex-end;</code></li>
+            <li><code class="code-word">align-content: center;</code></li>
+            <li><code class="code-word">align-content: stretch;</code></li>
+            <li><code class="code-word">align-content: space-between;</code></li>
+            <li><code class="code-word">align-content: space-around;</code></li>
+            <li><code class="code-word">align-content: space-evenly;</code></li>
+          </ul>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-start</figcaption>
+            <div class="example-container example-set-align-content-start">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using flex-end</figcaption>
+            <div class="example-container example-set-align-content-end">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using center</figcaption>
+            <div class="example-container example-set-align-content-center">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using stretch</figcaption>
+            <div class="example-container example-set-align-content-stretch">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Flex items stretch to fill the space (unless it has a specified size)</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-between</figcaption>
+            <div class="example-container example-set-align-content-space-between">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">The first line is flush with the <span class="highlighter">start</span> of the main axis, the last line is flush with the <span class="highlighter">end</span> of the main axis and all remaining items/lines spead evenly between them.</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-around</figcaption>
+            <div class="example-container example-set-align-content-space-around">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Even distribution with equal space between lines</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...using space-evenly</figcaption>
+            <div class="example-container example-set-align-content-space-evenly">
+              <div class="example-child-noheight">Alpha</div>
+              <div class="example-child-noheight">Beta</div>
+              <div class="example-child-noheight">Charlie</div>
+              <div class="example-child-noheight">Delta</div>
+              <div class="example-child-noheight">Echo</div>
+              <div class="example-child-noheight">Foxtrot</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Even distribution with equal space between items</p>
+        </div>
       </div>
-      <!--Section 3 Subsection D - Flex Container - Justify Content-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-justify-content">Justify Content</h5>
-        <p>So far we have set the container to use flexbox and to use either a row or column (with or without wrapping). Our next step aligns the flex children on the container <span class="highlighter">main-axis</span>.</p>
-        <p>The values available for <code class="code-word">justify-content</code> are:</p>
-        <ul class="code-value-list">
-          <li><code class="code-word">justify-content: flex-start;</code> (default)</li>
-          <li><code class="code-word">justify-content: flex-end;</code></li>
-          <li><code class="code-word">justify-content: center;</code></li>
-          <li><code class="code-word">justify-content: space-between;</code></li>
-          <li><code class="code-word">justify-content: space-around;</code></li>
-          <li><code class="code-word">justify-content: space-evenly;</code></li>
+    </section>
+    <!--Section 4 - Flex Children-->
+    <section class="container-box" id="section-flex-children">
+      <header class="container-header">
+        <h3>The Flexbox children...</h3>
+      </header>
+      <div class="container-box-content">
+        <p>By default as many flexbox children are placed onto each row as can fit and any overflow moves down to the next row (size of flex items depends on content)</p>
+        <p class="list-caption">Flex Children Properties</p>
+        <ul class="container-box-content-list">
+          <li><a href="#subsection-order">Order</a></li>
+          <li><a href="#subsection-grow">Flex Grow</a></li>
+          <li><a href="#subsection-shrink">Flex Shrink</a></li>
+          <li><a href="#subsection-basis">Flex Basis</a></li>
+          <li><a href="#subsection-flex">Flex</a></li>
+          <li><a href="#subsection-align-self">Align Self</a></li>
         </ul>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using flex-start</figcaption>
-          <div class="example-container example-set-justify-content-start">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the main-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using flex-end</figcaption>
-          <div class="example-container example-set-justify-content-end">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the main-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using center</figcaption>
-          <div class="example-container example-set-justify-content-center">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in around the center point of the main-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using space-between</figcaption>
-          <div class="example-container example-set-justify-content-between">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">The first flex item is flush with the <span class="highlighter">start</span> of the main axis, the last item is flush with the <span class="highlighter">end</span> of the main axis and all remaining items spead evenly between them.</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using space-around</figcaption>
-          <div class="example-container example-set-justify-content-around">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Every flex item has the same amount of space before and after it - this means that the first and last items look like have <span class="highlighter">half</span> the space at the very beginning and end (like a margin that doesn't collapse between siblings).</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using space-evenly</figcaption>
-          <div class="example-container example-set-justify-content-evenly">
-            <div class="example-child">Alpha</div>
-            <div class="example-child">Beta</div>
-            <div class="example-child">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">All flex items distributed along the main axis with equal space between them</p>
+        <!--Section 4 Subsection A - Flex Children - Order-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-order">Order</h5>
+          <p>Flexbox allows you to change the layout order of flex items without affecting the source order...could be of use for changing position of nav menu items in reponsive layouts</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...changing order</figcaption>
+            <div class="example-container example-set-order">
+              <div class="example-child" id="flex-example-order-a">Alpha</div>
+              <div class="example-child" id="flex-example-order-b">Beta</div>
+              <div class="example-child" id="flex-example-order-c">Charlie</div>
+            </div>
+          </figure>
+        </div>
+        <!--Section 4 Subsection B - Flex Children - Flex Grow-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-grow">Flex Grow</h5>
+          <p>Using<code class="code-word">flex-grow</code>gives the ability for the flex-item to grow if necessary and dictates how much space it can grow to take up by setting a unitless value.</p>
+          <p>If all items set to use <code class="code-word">flex-grow: 1;</code> they will share any available space equally, but of an item is set to 2 (or higher) that item will take twice the amount of space and so on... </p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...grow grow grow!</figcaption>
+            <div class="example-container example-set-grow">
+              <div class="example-child-noheight" id="flex-example-grow-a">Alpha</div>
+              <div class="example-child-noheight" id="flex-example-grow-b">Beta</div>
+              <div class="example-child-noheight" id="flex-example-grow-c">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Alpha is set to 0, Beta set to 2 and Charlie set to 1 for <code class="code-word">flex-grow</code> </p>
+        </div>
+        <!--Section 4 Subsection C - Flex Children - Flex Shrink-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-shrink">Flex Shrink</h5>
+          <p>Using <code class="code-word">flex-shrink</code> on the other hand goes in the opposite direction and defines the ability to shrink if necessary and where possible - also by setting a unitless value.</p>
+        </div>
+        <!--Section 4 Subsection D - Flex Children - Flex Basis-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-basis">Flex Basis</h5>
+          <p>With <code class="code-word">flex-basis</code> we can specify the default size of an item before the remaining space is distributed.</p>
+        </div>
+        <!--Section 4 Subsection E - Flex Children - Flex-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-flex">Flex</h5>
+          <p>Rather they using <code class="code-word">flex-grow</code>, <code class="code-word">flex-shrink</code> and <code class="code-word">flex-basis</code> seperately we instead use the shorthand of <code class="code-word">flex</code></p>
+        </div>
+        <!--Section 4 Subsection F - Flex Children - Align Self-->
+        <div class="container-box-content-subsection">
+          <h5 id="subsection-align-self">Align Self</h5>
+        </div>
       </div>
-      <!--Section 3 Subsection E - Flex Container - Align Items-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-align-items">Align Items</h5>
-        <p>Similar to <code class="code-word">justify-content</code> the <code class="code-word">align-items</code> aligns the flex items along the container but this time on the <span class="highlighter">cross-axis</span> (perpendicular to the <span class="highlighter">main-axis</span>).</p>
-        <p>The values available for <code class="code-word">align-items</code> are:</p>
-        <ul class="code-value-list">
-          <li><code class="code-word">align-items: flex-start;</code> (default)</li>
-          <li><code class="code-word">align-items: flex-end;</code></li>
-          <li><code class="code-word">align-items: center;</code></li>
-          <li><code class="code-word">align-items: stretch;</code></li>
-          <li><code class="code-word">align-items: baseline;</code></li>
-        </ul>
-        <p>All example boxes below are using <code class="code-word">flex-flow: row nowrap;</code> so the <span class="highlighter">cross-axis</span> is the y-axis (and also using <code class="code-word"> space-evenly</code> and the flex cheldren will also have different set heights.</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using flex-start</figcaption>
-          <div class="example-container example-set-align-items-start">
-            <div class="example-child example-child-small">Alpha</div>
-            <div class="example-child example-child-medium">Beta</div>
-            <div class="example-child example-child-large">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using flex-end</figcaption>
-          <div class="example-container example-set-align-items-end">
-            <div class="example-child example-child-small">Alpha</div>
-            <div class="example-child example-child-medium">Beta</div>
-            <div class="example-child example-child-large">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using center</figcaption>
-          <div class="example-container example-set-align-items-center">
-            <div class="example-child example-child-small">Alpha</div>
-            <div class="example-child example-child-medium">Beta</div>
-            <div class="example-child example-child-large">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using stretch</figcaption>
-          <div class="example-container example-set-align-items-stretch">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items stretch to fill the space - unless it has a specified size (then it will behave like flex-start)</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using baseline</figcaption>
-          <div class="example-container example-set-align-items-baseline">
-            <div class="example-child example-child-small">Alpha</div>
-            <div class="example-child example-child-medium">Beta</div>
-            <div class="example-child example-child-large">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are aligned so their baselines are aligned (all the text is on the same line regardless of the container size).</p>
-      </div>
-      <!--Section 3 Subsection F - Flex Container - Align Content-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-align-content">Align Content</h5>
-        <p>Similar to how <code class="code-word">justify-content</code> aligns individual items within the <span class="highlighter">main-axis</span>, <code class="code-word">align-content</code> aligns a flex container’s lines within the containers when there is extra space in the <span class="highlighter">cross-axis</span> (when there is more than 1 line of children)</p>
-        <p>The values available for <code class="code-word">align-content</code> are:</p>
-        <ul class="code-value-list">
-          <li><code class="code-word">align-content: flex-start;</code></li>
-          <li><code class="code-word">align-content: flex-end;</code></li>
-          <li><code class="code-word">align-content: center;</code></li>
-          <li><code class="code-word">align-content: stretch;</code></li>
-          <li><code class="code-word">align-content: space-between;</code></li>
-          <li><code class="code-word">align-content: space-around;</code></li>
-          <li><code class="code-word">align-content: space-evenly;</code></li>
-        </ul>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using flex-start</figcaption>
-          <div class="example-container example-set-align-content-start">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">start</span> of the cross-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using flex-end</figcaption>
-          <div class="example-container example-set-align-content-end">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in starting from the <span class="highlighter">end</span> of the cross-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using center</figcaption>
-          <div class="example-container example-set-align-content-center">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items are packed in around the <span class="highlighter">center</span> of the cross-axis</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using stretch</figcaption>
-          <div class="example-container example-set-align-content-stretch">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Flex items stretch to fill the space (unless it has a specified size)</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using space-between</figcaption>
-          <div class="example-container example-set-align-content-space-between">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">The first line is flush with the <span class="highlighter">start</span> of the main axis, the last line is flush with the <span class="highlighter">end</span> of the main axis and all remaining items/lines spead evenly between them.</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using space-around</figcaption>
-          <div class="example-container example-set-align-content-space-around">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Even distribution with equal space between lines</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...using space-evenly</figcaption>
-          <div class="example-container example-set-align-content-space-evenly">
-            <div class="example-child-noheight">Alpha</div>
-            <div class="example-child-noheight">Beta</div>
-            <div class="example-child-noheight">Charlie</div>
-            <div class="example-child-noheight">Delta</div>
-            <div class="example-child-noheight">Echo</div>
-            <div class="example-child-noheight">Foxtrot</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Even distribution with equal space between items</p>
-      </div>
+    </section>
+  </main>
+  <!-----
+  footer
+  ------->
+  <footer>
+    <!--Made by Me  - Github, Codepen, LinkedIn and Wordpress blog-->
+    <div id="all-about-me">
+      <p>Designed by <abbr title="Mary Ronan">MazOnTheMoon</abbr> 2020</p>
+      <p><a href="https://www.linkedin.com/in/mary-ronan/" target="_blank"> <span class="fab fa-linkedin"> </span></a>
+        <a href="https://github.com/MazontheMoon" target="_blank"> <span class="fab fa-github-square"> </span></a>
+        <a href="https://codepen.io/mazonthemoon/#" target="_blank"> <span class="fab fa-codepen"> </span></a>
+        <a href="https://mazcodesonthemoon.wordpress.com/" target="_blank"> <span class="fab fa-wordpress"> </span></a>
+      </p>
     </div>
-  </section>
-  <!--Section 4 - Flex Children-->
-  <section class="container-box" id="section-flex-children">
-    <header class="container-header">
-      <h3>The Flexbox children...</h3>
-    </header>
-    <div class="container-box-content">
-      <p>By default as many flexbox children are placed onto each row as can fit and any overflow moves down to the next row (size of flex items depends on content)</p>
-      <p class="list-caption">Flex Children Properties</p>
-      <ul class="container-box-content-list">
-        <li><a href="#subsection-order">Order</a></li>
-        <li><a href="#subsection-grow">Flex Grow</a></li>
-        <li><a href="#subsection-shrink">Flex Shrink</a></li>
-        <li><a href="#subsection-basis">Flex Basis</a></li>
-        <li><a href="#subsection-flex">Flex</a></li>
-        <li><a href="#subsection-align-self">Align Self</a></li>
-      </ul>
-      <!--Section 4 Subsection A - Flex Children - Order-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-order">Order</h5>
-        <p>Flexbox allows you to change the layout order of flex items without affecting the source order...could be of use for changing position of nav menu items in reponsive layouts</p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...changing order</figcaption>
-          <div class="example-container example-set-order">
-            <div class="example-child" id="flex-example-order-a">Alpha</div>
-            <div class="example-child" id="flex-example-order-b">Beta</div>
-            <div class="example-child" id="flex-example-order-c">Charlie</div>
-          </div>
-        </figure>
-      </div>
-      <!--Section 4 Subsection B - Flex Children - Flex Grow-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-grow">Flex Grow</h5>
-        <p>Using<code class="code-word">flex-grow</code>gives the ability for the flex-item to grow if necessary and dictates how much space it can grow to take up by setting a unitless value.</p>
-        <p>If all items set to use <code class="code-word">flex-grow: 1;</code> they will share any available space equally, but of an item is set to 2 (or higher) that item will take twice the amount of space. </p>
-        <figure class="flex-examples">
-          <figcaption>Seeing is believing...grow grow grow!</figcaption>
-          <div class="example-container example-set-grow">
-            <div class="example-child-noheight" id="flex-example-grow-a">Alpha</div>
-            <div class="example-child-noheight" id="flex-example-grow-b">Beta</div>
-            <div class="example-child-noheight" id="flex-example-grow-c">Charlie</div>
-          </div>
-        </figure>
-        <p class="flex-examples-info">Alpha is set to 0, Beta set to 2 and Charlie set to 1 for <code class="code-word">flex-grow</code> </p>
-      </div>
-      <!--Section 4 Subsection C - Flex Children - Flex Shrink-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-shrink">Flex Shrink</h5>
-      </div>
-      <!--Section 4 Subsection D - Flex Children - Flex Basis-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-basis">Flex Basis</h5>
-      </div>
-      <!--Section 4 Subsection E - Flex Children - Flex-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-flex">Flex</h5>
-      </div>
-      <!--Section 4 Subsection F - Flex Children - Align Self-->
-      <div class="container-box-content-subsection">
-        <h5 id="subsection-align-self">Align Self</h5>
-      </div>
-    </div>
-  </section>
-</main>
-<!-----
-footer
-------->
-<footer>
-  <!--Made by Me  - Github, Codepen, LinkedIn and Wordpress blog-->
-  <div id="all-about-me">
-    <p>Designed by <abbr title="Mary Ronan">MazOnTheMoon</abbr> 2020</p>
-    <p><a href="https://www.linkedin.com/in/mary-ronan/" target="_blank"> <span class="fab fa-linkedin"> </span></a>
-      <a href="https://github.com/MazontheMoon" target="_blank"> <span class="fab fa-github-square"> </span></a>
-      <a href="https://codepen.io/mazonthemoon/#" target="_blank"> <span class="fab fa-codepen"> </span></a>
-      <a href="https://mazcodesonthemoon.wordpress.com/" target="_blank"> <span class="fab fa-wordpress"> </span></a>
-    </p>
-  </div>
-  <!--Back to top shortcut-->
-  <div class="backtotop"><a class="toplink" href="#top"> <i class="far fa-arrow-alt-circle-up"></i></a></div>
-</footer>
+    <!--Back to top shortcut-->
+    <div class="backtotop"><a class="toplink" href="#top"> <i class="far fa-arrow-alt-circle-up"></i></a></div>
+  </footer>
 </body>
 </html>
