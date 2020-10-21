@@ -65,7 +65,7 @@ Finding your way around
         <h3>What you need to know...</h3>
       </header>
       <div class="container-box-content">
-        <p>My collection of cheatsheets in my self-taught coding journey so far have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and then looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
+        <p>My collection of cheatsheets so far in my teach-myself-to-code journey have looked at topics such as the Box Model and Selectors which are about about how the content boxes work and methods to select them, and then looked at Display and Positioning for where to put the selected <q>boxes</q>. Flex is a Display property but deserved a page all to itself.</p>
       </div>
     </section>
     <!--Section 2 - Why use Flex-->
@@ -75,7 +75,7 @@ Finding your way around
       </header>
       <div class="container-box-content">
         <p>In a nutshell flexbox is used to layout and align items in the container when the dimensions are unknown...so it needs to be flexible!</p>
-        <p>Flex is best used in 1D layouts such as a single row or column.</p>
+        <p>It is best used in 1D layouts such as a single row or column.</p>
       </div>
     </section>
     <!--Section 3 - Flex Container-->
@@ -480,7 +480,7 @@ Finding your way around
         <!--Section 4 Subsection B - Flex Children - Flex Grow-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-grow">Flex Grow</h5>
-          <p>Using<code class="code-word">flex-grow</code>gives the ability for the flex-item to grow if necessary and dictates how much space it can grow to take up by setting a unitless value.</p>
+          <p>Using <code class="code-word">flex-grow</code> gives the ability for the flex-item to grow if necessary and dictates how much space it can grow to take up by setting a unitless value.</p>
           <p>If all items set to use <code class="code-word">flex-grow: 1;</code> they will share any available space equally, but of an item is set to 2 (or higher) that item will take twice the amount of space and so on... </p>
           <figure class="flex-examples">
             <figcaption>Seeing is believing...grow grow grow!</figcaption>
@@ -496,11 +496,21 @@ Finding your way around
         <div class="container-box-content-subsection">
           <h5 id="subsection-shrink">Flex Shrink</h5>
           <p>Using <code class="code-word">flex-shrink</code> on the other hand goes in the opposite direction and defines the ability to shrink if necessary and where possible - also by setting a unitless value.</p>
+          <p>This is not often used unless you specifically do not want an item to shrink when the container resizes.</p>
         </div>
         <!--Section 4 Subsection D - Flex Children - Flex Basis-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-basis">Flex Basis</h5>
           <p>With <code class="code-word">flex-basis</code> we can specify the default size of an item before the remaining space is distributed.</p>
+          <figure class="flex-examples">
+            <figcaption>Seeing is believing...flex-basis!</figcaption>
+            <div class="example-container example-set-basis">
+              <div class="example-child-width" id="flex-example-basis-a">Alpha</div>
+              <div class="example-child-width" id="flex-example-basis-b">Beta</div>
+              <div class="example-child-width" id="flex-example-basis-c">Charlie</div>
+            </div>
+          </figure>
+          <p class="flex-examples-info">Beta has <code class="code-word">flex-basis</code> set and all set equally for <code class="code-word">flex-grow</code></p>
         </div>
         <!--Section 4 Subsection E - Flex Children - Flex-->
         <div class="container-box-content-subsection">
@@ -533,7 +543,7 @@ Finding your way around
         <!--Section 4 Subsection F - Flex Children - Align Self-->
         <div class="container-box-content-subsection">
           <h5 id="subsection-align-self">Align Self</h5>
-          <p>Using <code class="code-word">align-self</code>allows the default alignemtn or the alignment set by <code class="code-word">align-items</code> to be overridden by the flex child.</p>
+          <p>Using <code class="code-word">align-self</code> allows the default alignment or the alignment set by <code class="code-word">align-items</code> to be overridden by the flex child.</p>
           <p>The same values available for <code class="code-word">align-items</code> can be used with <code class="code-word">align-self</code>:</p>
           <ul class="code-value-list">
             <li><code class="code-word">align-self: flex-start;</code> (default)</li>
