@@ -465,6 +465,27 @@ Code Illustration styling
   flex-grow: 1;
 }
 
+/*flex grow examples*/
+.example-set-basis {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+#flex-example-basis-a {
+  flex-grow: 1;
+}
+
+#flex-example-basis-b {
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+
+#flex-example-basis-c {
+  flex-grow: 1;
+}
+
 /*align-self examples*/
 
 #flex-example-align-self {
