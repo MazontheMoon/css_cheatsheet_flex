@@ -22,6 +22,9 @@ body {
   margin: 0;
   padding: 0;
   font-size: 100%; /*100% = 16px*/
+  color: var-- {
+
+  }
 }
 
 /*set global styles*/
@@ -59,6 +62,21 @@ body {
     "content"
     "footer";
   grid-gap: 0;
+  /*gradient fade from teal to purple*/
+  background: linear-gradient(
+    50deg,
+    #006466,
+    #065a60,
+    #0b525b,
+    #144552,
+    #1b3a4b,
+    #212f45,
+    #272640,
+    #312244,
+    #3e1f47,
+    #4d194d
+  );
+  color: white;
 }
 
 /*layout test*/
@@ -116,6 +134,10 @@ Header
 =================*/
 #top {
   grid-area: header;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*================
@@ -123,6 +145,7 @@ Nav Menu Bar
 =================*/
 nav {
   grid-area: navbar;
+  width: 100%;
 }
 
 .nav-bar {
@@ -140,18 +163,22 @@ Main section layout and styles
 
 main {
   grid-area: content;
+  width: 100%;
 }
 
 /*================
 Section Styling
 =================*/
 .container-box {
+  width: 95%;
+  margin: 0 auto;
 }
 
 .container-header {
 }
 
 .container-box-content {
+  margin: 0.6rem;
 }
 
 .container-box-content-list {
@@ -462,6 +489,27 @@ Code Illustration styling
 }
 
 #flex-example-grow-c {
+  flex-grow: 1;
+}
+
+/*flex grow examples*/
+.example-set-basis {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+#flex-example-basis-a {
+  flex-grow: 1;
+}
+
+#flex-example-basis-b {
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+
+#flex-example-basis-c {
   flex-grow: 1;
 }
 
