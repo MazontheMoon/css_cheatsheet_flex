@@ -20,6 +20,7 @@ Web Browser
 ## Versioning
 
 Version #1.1 - Initial Content
+Version #1.2 - Initial Style
 
 
 ## Table of Contents 
@@ -44,13 +45,13 @@ Example "section-content"
 Keyword: Description FILE
 Examples:
 
-* create: Added new document INDEX
-* new: Adding new content for sectionB INDEX
-* update: Added info to existing section on INDEX
+* create: Add new document INDEX
+* new: Add new content for sectionB INDEX
+* update: Add info to existing section on INDEX
 * fix: Typo in sectionA content INDEX
-* style: Added colour schema to page STYLESHEET
-* docs: Added naming convention rules to README
-* test: Testing accessibility for styles in STYLESHEET
+* style: Add colour schema to page STYLESHEET
+* docs: Add naming convention rules to README
+* test: Test accessibility for styles in STYLESHEET
 
 
 ## Resources
