@@ -71,57 +71,6 @@ body {
   color: white;
 }
 
-/*layout test* /
-body {
-  border: solid 3px black;
-}
-
-#top {
-  border: solid 3px yellow;
-}
-
-nav {
-  border: solid 3px blue;
-}
-
-main {
-  border: solid 3px green;
-}
-
-.container-box {
-  border: solid 3px grey;
-}
-
-.container-header {
-  border: solid 3px teal;
-}
-
-.container-box-content {
-  border: solid 3px orange;
-}
-
-.container-box-content-list {
-  border: solid 3px lavender;
-}
-
-.container-box-content-subsection {
-  border: solid 3px seagreen;
-}
-
-.flex-examples {
-  border: solid 3px #dd2c00;
-}
-
-.flex-examples-info {
-  border: solid 3px #8e24aa;
-}
-
-footer {
-  border: solid 3px red;
-}
-
-/*End of layout test boxes*/
-
 /*================
 Header
 =================*/
@@ -131,7 +80,7 @@ Header
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid 0.2rem;
+  border-bottom: solid 0.4rem;
   margin-bottom: 0.6rem;
 }
 
@@ -171,7 +120,7 @@ nav {
 }
 
 .nav-button-inner:hover a {
-  padding-left: 20%;
+  padding-left: 10%;
   transition: all 1s;
 }
 
@@ -189,7 +138,7 @@ Section Styling
 =================*/
 .container-box {
   width: 95%;
-  margin: 1.4rem 1rem;
+  margin: 1.4rem auto;
   padding: 0.2rem;
   border-left: solid 0.2rem;
 }
@@ -229,7 +178,14 @@ h3 {
   border-bottom: dotted 0.1rem;
 }
 
+.container-box-content-subsection p {
+  margin-bottom: 0.4rem;
+}
+
 .code-value-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0;
 }
 
 /*================
@@ -280,21 +236,23 @@ Code Illustration styling
 =======================*/
 /*figure to contain the example illustrations*/
 .flex-examples {
-  margin: 0.8rem 0;
-  padding-left: 1.4rem;
+  margin: 0.6rem 0;
 }
 
 /*figcaption to label the property and value set in illustration*/
 
 .flex-examples figcaption {
-  margin: 0.2rem 0;
+  margin: 0.4rem 0;
   font-style: italic;
-  font-family: var(--code-font);
+  font-family: var(--text-font);
   font-size: 1.2rem;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 /*Text description for additional explanation to the info in the caption*/
 .flex-examples-info {
+  padding-bottom: 0.4rem;
 }
 
 /*container box for flex examples*/
@@ -310,7 +268,6 @@ Code Illustration styling
   width: 75px;
   height: 45px;
   margin: 1px;
-  /*border: solid 1px var(--text-light, white);*/
   border: solid 1px white;
   background-color: black;
   color: white;
@@ -337,20 +294,25 @@ Code Illustration styling
 
 .example-child-noheight {
   width: 75px;
-  border: solid 1px var(--text-light, white);
-  background-color: purple;
-  color: var(--text-light, white);
+  margin: 1px;
+  border: solid 1px white;
+  background-color: black;
+  color: white;
+  font-family: var(--code-font);
   text-align: center;
 }
 
 .example-child-width {
-  border: solid 1px var(--text-light, white);
-  background-color: purple;
-  color: var(--text-light, white);
+  margin: 1px;
+  border: solid 1px white;
+  background-color: black;
+  color: white;
+  font-family: var(--code-font);
   text-align: center;
 }
 
 /*flex default*/
+
 .example-set-flex {
   display: flex;
 }
@@ -597,19 +559,26 @@ Footer
 ======*/
 footer {
   grid-area: footer;
+  border-top: solid 0.4rem;
 }
 
-/*==========
-Link styles
-===========*/
+#all-about-me {
+  padding: 0.4rem;
+  text-align: center;
+  line-height: 150%;
+}
+
+/* Link styles */
+
+footer p a {
+  font-size: 2rem;
+}
 
 /*================
 The little touches
 =================*/
 
-/*In case of image not found*/
-
-/*Back to top*/
+/*Back to top* - only for mobile screen views/
 
 /*=============
 Accessibility
