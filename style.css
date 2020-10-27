@@ -22,8 +22,9 @@ Declare variables for page
 =========================*/
 :root {
   /*font and text*/
-  --header-text-font: "Shadows Into Light", "Trebuchet MS", cursive;
+  --header-text-font: Grandstander, "Trebuchet MS", cursive;
   --text-font: Gudea, Verdana, sans-serif;
+  --code-font: "Roboto Mono", monospace;
 }
 
 /*============
@@ -55,7 +56,7 @@ body {
   grid-gap: 0;
   /*background gradient fade from purple to teal*/
   background: linear-gradient(
-    50deg,
+    60deg,
     #006466,
     #065a60,
     #0b525b,
@@ -114,6 +115,7 @@ main {
 .flex-examples-info {
   border: solid 3px #8e24aa;
 }
+
 footer {
   border: solid 3px red;
 }
@@ -160,7 +162,7 @@ nav {
   text-decoration: none;
   color: white;
   line-height: 200%;
-  font-weight: bold;
+  font-family: var(--header-text-font);
 }
 
 .nav-button-outer {
@@ -187,28 +189,44 @@ Section Styling
 =================*/
 .container-box {
   width: 95%;
-  margin: 0.8rem auto;
-  padding: 0 0.8rem;
+  margin: 1.4rem 1rem;
+  padding: 0.2rem;
   border-left: solid 0.2rem;
 }
 
 .container-header {
-  padding-bottom: 0.4rem;
+  margin: 0 0.4rem;
+  padding: 0 0.2rem 0.4rem;
   border-bottom: solid 0.2rem;
 }
 
 h3 {
   font-family: var(--header-text-font);
+  font-size: 1.8rem;
 }
 
 .container-box-content {
-  margin: 0.6rem;
+  padding: 0.4rem 0.6rem 0;
 }
 
 .container-box-content-list {
+  margin: 0.4rem;
+  padding: 0.4rem;
+  list-style: none;
+}
+
+.container-box-content-list li {
+  margin: 0.6rem 0;
 }
 
 .container-box-content-subsection {
+  margin-left: 1.2rem;
+}
+
+.container-box-content-subsection h5 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  border-bottom: dotted 0.1rem;
 }
 
 .code-value-list {
@@ -224,12 +242,24 @@ Extra Font Styling
 }
 
 .list-caption {
+  text-decoration: underline;
+  line-height: 125%;
+  font-family: var(--header-text-font);
+  font-size: 1.6rem;
 }
 
+.container-box-content-list li a {
+  color: white;
+  text-decoration: none;
+  border-left: solid 0.2rem;
+  padding-left: 0.4rem;
+}
 /*===================
 Code Snippet styling
 ===================*/
 .code-word {
+  font-family: var(--code-font);
+  font-style: italic;
 }
 
 .code-box {
@@ -241,21 +271,32 @@ Code Snippet styling
   border-radius: 0.8rem;
 }
 
+.code-box pre {
+  font-family: var(--code-font);
+}
+
 /*========================
 Code Illustration styling
 =======================*/
 /*figure to contain the example illustrations*/
 .flex-examples {
+  margin: 0.8rem 0;
+  padding-left: 1.4rem;
 }
 
 /*figcaption to label the property and value set in illustration*/
 
 .flex-examples figcaption {
+  margin: 0.2rem 0;
+  font-style: italic;
+  font-family: var(--code-font);
+  font-size: 1.2rem;
 }
 
 /*Text description for additional explanation to the info in the caption*/
 .flex-examples-info {
 }
+
 /*container box for flex examples*/
 .example-container {
   width: 250px;
@@ -268,9 +309,12 @@ Code Illustration styling
 .example-child {
   width: 75px;
   height: 45px;
-  border: solid 1px var(--text-light, white);
-  background-color: purple;
-  color: var(--text-light, white);
+  margin: 1px;
+  /*border: solid 1px var(--text-light, white);*/
+  border: solid 1px white;
+  background-color: black;
+  color: white;
+  font-family: var(--code-font);
   text-align: center;
   line-height: 45px;
 }
