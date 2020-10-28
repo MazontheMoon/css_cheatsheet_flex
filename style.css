@@ -99,6 +99,7 @@ Nav Menu Bar
 nav {
   grid-area: navbar;
   width: 100%;
+  position: relative;
 }
 
 #nav-bar {
@@ -117,6 +118,10 @@ nav {
 .nav-button-outer {
   border-bottom: solid 0.1rem;
   margin: 0.6rem 0;
+}
+
+.nav-button-inner {
+  padding-left: 0;
 }
 
 .nav-button-inner:hover a {
@@ -568,10 +573,15 @@ footer {
   line-height: 150%;
 }
 
+#all-about-me p:first-of-type {
+  margin-bottom: 1rem;
+}
+
 /* Link styles */
 
 footer p a {
   font-size: 2rem;
+  padding: 0.4rem;
 }
 
 /*================
@@ -584,7 +594,12 @@ The little touches
 Accessibility
 ===============*/
 
-/*Remove animation on browser prference*/
+@media (prefers-reduced-motion) {
+  /*remove animation for sliding menu buttons*/
+  .nav-button-inner:hover a {
+    padding-left: 0;
+  }
+}
 
 /*=============
 Responsiveness
@@ -602,8 +617,59 @@ Responsiveness
       "footer footer";
     font-size: 16px;
   }
+
+  /*nav-bar stays on side view*/
+  #nav-bar {
+    position: sticky;
+    top: 0;
+  }
+
+  /*not needed on this view as have side-menu always available*/
+  .backtotop {
+    display: none;
+  }
 }
 
 /*====
 Print
 =====*/
+@media print {
+  /*reset colours to plain black and white*/
+  body * {
+    background-color: none;
+    color: black;
+    border-left: none;
+  }
+
+  /*font size - change px to pt*/
+  h1 {
+    font-size: 18pt;
+    text-shadow: none;
+  }
+
+  h3 {
+    font-size: 16pt;
+  }
+
+  h5 {
+    font-size: 14pt;
+  }
+
+  p,
+  li,
+  code pre {
+    font-size: 12pt;
+  }
+
+  figcaption,
+  abbr {
+    font-size: 10pt;
+  }
+
+  /*remove unneeded elements*/
+  nav {
+    display: none;
+  }
+
+  /*Layout - single column*/
+}
