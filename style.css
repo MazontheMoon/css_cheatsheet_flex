@@ -89,6 +89,7 @@ h1 {
   font-family: var(--header-text-font);
   font-size: 2.6rem;
   line-height: 125%;
+  text-shadow: -0.1rem -0.1rem 0.3rem black, 0.2rem 0.2rem 0.3rem black;
   margin: 0.4rem;
   padding: 0.8rem;
 }
@@ -113,6 +114,7 @@ nav {
   color: white;
   line-height: 200%;
   font-family: var(--header-text-font);
+  text-shadow: -0.1rem -0.1rem 0.3rem black, 0.2rem 0.2rem 0.3rem black;
 }
 
 .nav-button-outer {
@@ -157,6 +159,7 @@ Section Styling
 h3 {
   font-family: var(--header-text-font);
   font-size: 1.8rem;
+  text-shadow: 0.2rem 0.2rem 0.3rem black;
 }
 
 .container-box-content {
@@ -175,10 +178,12 @@ h3 {
 
 .container-box-content-subsection {
   margin-left: 1.2rem;
+  padding-top: 1rem;
 }
 
 .container-box-content-subsection h5 {
   font-size: 1.4rem;
+  text-shadow: 0.2rem 0.2rem 0.3rem black;
   margin-bottom: 0.6rem;
   border-bottom: dotted 0.1rem;
 }
@@ -207,6 +212,7 @@ Extra Font Styling
   line-height: 125%;
   font-family: var(--header-text-font);
   font-size: 1.6rem;
+  margin-top: 1rem;
 }
 
 .container-box-content-list li a {
@@ -252,7 +258,6 @@ Code Illustration styling
   font-family: var(--text-font);
   font-size: 1.2rem;
   text-decoration: underline;
-  text-decoration-style: dotted;
 }
 
 /*Text description for additional explanation to the info in the caption*/
@@ -565,6 +570,7 @@ Footer
 footer {
   grid-area: footer;
   border-top: solid 0.4rem;
+  position: relative;
 }
 
 #all-about-me {
@@ -579,16 +585,47 @@ footer {
 
 /* Link styles */
 
-footer p a {
+footer a {
   font-size: 2rem;
   padding: 0.4rem;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:link {
+  opacity: 1;
+}
+
+footer a:visited {
+  opacity: 0.35;
+}
+
+footer a:focus {
+  opacity: 0.5;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+footer a:active {
+  opacity: 0.5;
 }
 
 /*================
 The little touches
 =================*/
 
-/*Back to top* - only for mobile screen views/
+/*Back to top - only for mobile screen views*/
+.backtotop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+  padding: 0.4rem;
+}
 
 /*=============
 Accessibility
